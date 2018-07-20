@@ -28,21 +28,29 @@
   margin: 0 0 10px;
   color: #444;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.75rem;
 }
 
 .problem_description{
+  color: #444;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+
+.problem_question{
   color: #666;
   line-height: 1.5rem;
   font-size: 0.875rem;
 }
 
-.problem_question{
-  color: #444;
-  line-height: 1.5rem;
-  font-size: 0.875rem;
+.problem_Answer1{
+  color: #000;
+  line-height: 1.9rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  border-bottom: solid 1px #aaa;
 }
 
 .problem_btn{
@@ -78,18 +86,43 @@
 }
 
 .columnNoneResult {
-  flex-basis: 50%;
-  width: 50%;
-  padding: 0 10px;
-  box-sizing: border-box;
+  background: #fff;
+  margin: 0 0  20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-top: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #aaa;
   display: none;
 }
 
 
 .columnResult {
-  flex-basis: 50%;
-  width: 50%;
-  padding: 0 10px;
-  box-sizing: border-box;
+  background: rgb(23, 116, 23);
+  margin: 0 0  20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-top: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #aaa;
+}
+
+.columnResult_title{
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.75rem;
+}
+
+.columnResult_result{
+  color: #fff;
+  line-height: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 550;
 }
 
