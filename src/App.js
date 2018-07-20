@@ -64,9 +64,24 @@ class App extends Component {
   }
 
   ShowAnswer(){
+    var P= [2], n= 3, div, i, limit, isPrime;
+    while(P.length<10001){
+        div= 3, i= 1;
+        limit= Math.sqrt(n)+1;
+        isPrime= true;
+        while(div<limit){
+            if(n%div=== 0){
+                isPrime= false;
+                div= limit;
+            }
+            else div= P[i++] || div+ 2;
+        }
+        if(isPrime) P.push(n);
+        n+= 2;
+    }
     this.setState(
       {
-        Result3: "123",
+        Result3: P[P.length-1],
         ClassResult3: "columnResult"
       }
     )
@@ -91,16 +106,16 @@ class App extends Component {
           <div className="column">
             <article className="problem">
               <h2 className="problem_title">Special Pythagorean triplet</h2>
-              <p className="problem_description">A Pythagorean triplet is a set of three natural numbers, A smaller than B smaller than C for which, a2 + b2 = c2 </p>
+              <p className="problem_description">A Pythagorean triplet is a set of three natural numbers, A smaller than B smaller than C for which, a^2 + b^2 = c^2 </p>
               <p className="problem_Question">There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.</p>
               <button className="problem_btn" onClick={this.PopSolution}>Pop Solution</button>
             </article>
           </div>
           <div className="column">
             <article className="problem">
-              <h2 className="problem_title">Power digit sum</h2>
-              <p className="problem_description">215 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.</p>
-              <p className="problem_Question">What is the sum of the digits of the number 21000?</p>
+              <h2 className="problem_title">10001st prime</h2>
+              <p className="problem_description">By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.</p>
+              <p className="problem_Question">What is the 10 001st prime number?</p>
               <button className="problem_btn" onClick={this.ShowAnswer}>Show Answer</button >
             </article>
           </div>
