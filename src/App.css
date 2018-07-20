@@ -16,21 +16,14 @@
   background: #fff;
   margin: 0 0  20px;
   padding: 20px;
-  border-radius: 2px;
-  box-shadow: 0 2px 4px rgba(#000, 0.2);
   cursor: pointer;
   transition: 0.3s ease;
+  border-top: solid 1px #aaa;
+  border-bottom: solid 1px #aaa;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #aaa;
 }
 
-.problem:hover{
-    box-shadow: 0 2px 4px rgba(#000, 0.2),
-     0 4px 8ox rgba(#000,0.2);
-}
-.problem:active{
-  box-shadow: none;
-  transform-origin: center;
-  transform: scale(0.98);
-}
 .problem_title{
   margin: 0 0 10px;
   color: #444;
@@ -64,32 +57,22 @@
   text-transform: uppercase;
 }
 
+.problem_btn:active{
+  box-shadow: none;
+  background: rgb(23, 146, 23);
+  transform-origin: center;
+  transform: scale(0.98);
+}
+
 .container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  max-width: 960px;
-  margin: 0 auto;
+  margin: 10px 10px;
 }
-
-.column{
-  flex-basis: 33.33%;
-  width: 33.33%;
+.column {
+  flex-basis: 50%;
+  width: 50%;
   padding: 0 10px;
   box-sizing: border-box;
-}
-
-@media (max-width: 900px){
-  .column{
-    flex-basis: 50%;
-    width: 50%
-  }
-}
-
-@media (max-width: 600px){
-  .column{
-    flex-basis: 100%;
-    width: 100%;
-  }
 }
