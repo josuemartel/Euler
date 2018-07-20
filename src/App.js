@@ -16,10 +16,7 @@ class App extends Component {
   }
   
   Solve() {
-    var Multiple3=0;
-    var Multiple5=0;
-    var Multiple15=0;
-    var FinalResult=0;
+    var Multiple3=0, Multiple5=0, Multiple15=0, FinalResult=0;
 
     for (var i = 1; i <1000; i++) {
         if((i % 3) == 0){
@@ -42,11 +39,7 @@ class App extends Component {
   }
 
   PopSolution(){
-    var Result2=0;
-    var a=0;
-    var b=1;
-    var c=0;
-    var sum=0;
+    var Result2=0, a=0, b=1, c=0, sum=0;
     
     for(a=3; a<=1000; a++)
     {
@@ -64,17 +57,20 @@ class App extends Component {
   }
 
   ShowAnswer(){
-    var P= [2], n= 3, div, i, limit, isPrime;
+    var P=[2], n=3, div, i, limit, isPrime;
     while(P.length<10001){
-        div= 3, i= 1;
+        div=3, i=1;
         limit= Math.sqrt(n)+1;
         isPrime= true;
         while(div<limit){
             if(n%div=== 0){
-                isPrime= false;
-                div= limit;
+                isPrime=false;
+                div=limit;
             }
-            else div= P[i++] || div+ 2;
+            else
+            {
+              div= P[i++] || div+ 2;
+            }
         }
         if(isPrime) P.push(n);
         n+= 2;
